@@ -4,16 +4,17 @@
           Total Calorie Amount : {{totalCalories}}
         </div>
        <ion-list>
-      <ion-item ng-repeat="food in data.foods" class="item item-button-right">
+      <ion-item ng-repeat="food in data.foods" class="item item-icon-right">
           
         <h4>Food Name: {{ food.mytitle }}</h4>
-          <br />
         <h4>Calorie Amount: {{ food.calories }} </h4>
+        <h4>Date: {{ food.date | date: DD:mm:yy }} </h4>
         
-        
-            <button class="button button-small button-assertive" ng-click="deleteFood(food)"> 
-            Remove Entry
-            </button>
+        <ion-option-button class="button button-small button-assertive" ng-click="deleteFood(food)"> 
+        Remove Entry
+        </ion-option-button>
+          
+        <i class="icon ion-chevron-left icon-accessory"></i>
        
       </ion-item>
     </ion-list>
