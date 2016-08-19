@@ -4,19 +4,36 @@ angular.module('starter.services', [])
 .factory('Food', function() {
     
     var data = {
-        foods: [{ mytitle: "", calories: 0}]
+        foods: [{ mytitle: "Beans", calories: 200}],
+        totalCal : 0
        
+    }
+
+    
+    function calculateCal(){
+        data.totalCal = 0;
+        //console.log("Running");
+        for (var i = 0; i < data.foods.length; i++)
+            {
+                data.totalCal += data.foods[i].calories;
+            }
+        //console.log(data.totalCal);
+        
+        return data.totalCal;    
+        
     }
     
     function addEntry(m, n){
         data.foods.push({mytitle: m, calories: n});
     }
     
+    
     return {
         data: data,
         addEntry : addEntry,
         deleteFood: function (del){
           data.foods.splice(data.foods.indexOf(del), 1);
-      }
+      },
+        totalCal : calculateCal
     }
 });

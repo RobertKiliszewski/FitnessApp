@@ -1,27 +1,29 @@
 <ion-view view-title="Input">
-  <ion-content>
-      
-        <div class="list">
+  <ion-content style="background-color: #444">
+      <div class="card padding">
+      Total Calorie Amount : {{totalCalories}}
+      </div>
+        <!--<div class="list"> -->
             <label class="item item-input">
                 <span class="input-label">
                     Food Name:
                 </span>
-                <input type="text" ng-model="mytitle" placeholder="Eg.Chicken Breast">
+                <input type="text" ng-model="data.mytitle" placeholder="Eg.Chicken Breast">
             </label>
-        </div>
+         <!--</div> -->
       
-      <div class="list">
+      <!--<div class="list"> -->
             <label class="item item-input">
                 <span class="input-label">
                     Calories: 
                 </span>
-                <input type="number" ng-model="calories" placeholder="Eg.500">
+                <input type="number" ng-model="data.calories" placeholder="Eg.500">
           </label>
-      </div>
+       <!--</div>-->
       
    <div class="col text-center">
-        <button class="button button-balanced" ng-click="add(mytitle, calories)">
-          Add Items
+        <button class="button button-balanced" ng-click="add(data.mytitle, data.calories)">
+          Add Entry
         </button>
    </div>
       

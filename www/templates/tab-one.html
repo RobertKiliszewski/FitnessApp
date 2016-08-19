@@ -1,20 +1,21 @@
 <ion-view view-title="Your Foods">
-  <ion-content>
+  <ion-content style="background-color: #444">
+        <div class="card padding">
+          Total Calorie Amount : {{totalCalories}}
+        </div>
        <ion-list>
-      <ion-item ng-repeat="food in data.foods">
+      <ion-item ng-repeat="food in data.foods" class="item item-button-right">
           
         <h4>Food Name: {{ food.mytitle }}</h4>
           <br />
         <h4>Calorie Amount: {{ food.calories }} </h4>
         
-        <div class="col text-right">
-            <button class="button button-assertive" ng-click="deleteFood(food)"> 
+        
+            <button class="button button-small button-assertive" ng-click="deleteFood(food)"> 
             Remove Entry
             </button>
-        </div>
-
+       
       </ion-item>
     </ion-list>
-      <h4>Total Calorie Amount : {{data.total}}</h4>
   </ion-content>
 </ion-view>
