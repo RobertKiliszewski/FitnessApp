@@ -1,0 +1,10 @@
+/*all the colours and code were gathered from https://forum.ionicframework.com/t/how-do-i-set-the-background-color-for-my-app/8677 */
+
+.bar.bar-stable {
+    background-color: dodgerblue;
+    color: white;
+}
+.bar.bar-stable .title {
+    background-color: dodgerblue;
+    color: white;
+}
